@@ -1,0 +1,246 @@
+default-club-color: "&b"
+
+gui:
+  club-color:
+    title: "Select Club Color"
+    size: 27
+    items:
+      white:
+        slot: 0
+        material: WOOL
+        data: 0
+        name: "&fWhite"
+        color-code: "&f"
+      red:
+        slot: 1
+        material: WOOL
+        data: 14
+        name: "&cRed"
+        color-code: "&c"
+      dark_red:
+        slot: 2
+        material: WOOL
+        data: 14
+        name: "&4Dark Red"
+        color-code: "&4"
+      gold:
+        slot: 3
+        material: WOOL
+        data: 1
+        name: "&6Gold"
+        color-code: "&6"
+      yellow:
+        slot: 4
+        material: WOOL
+        data: 4
+        name: "&eYellow"
+        color-code: "&e"
+      green:
+        slot: 5
+        material: WOOL
+        data: 5
+        name: "&aGreen"
+        color-code: "&a"
+      dark_green:
+        slot: 6
+        material: WOOL
+        data: 13
+        name: "&2Dark Green"
+        color-code: "&2"
+      cyan:
+        slot: 7
+        material: WOOL
+        data: 9
+        name: "&bCyan"
+        color-code: "&b"
+      dark_aqua:
+        slot: 8
+        material: WOOL
+        data: 9
+        name: "&3Dark Aqua"
+        color-code: "&3"
+      blue:
+        slot: 10
+        material: WOOL
+        data: 3
+        name: "&9Blue"
+        color-code: "&9"
+      dark_blue:
+        slot: 11
+        material: WOOL
+        data: 11
+        name: "&1Dark Blue"
+        color-code: "&1"
+      light_purple:
+        slot: 12
+        material: WOOL
+        data: 6
+        name: "&dLight Purple"
+        color-code: "&d"
+      purple:
+        slot: 13
+        material: WOOL
+        data: 10
+        name: "&5Dark Purple"
+        color-code: "&5"
+      gray:
+        slot: 14
+        material: WOOL
+        data: 8
+        name: "&7Gray"
+        color-code: "&7"
+      dark_gray:
+        slot: 15
+        material: WOOL
+        data: 7
+        name: "&8Dark Gray"
+        color-code: "&8"
+      black:
+        slot: 16
+        material: WOOL
+        data: 15
+        name: "&0Black"
+        color-code: "&0"
+      reset:
+        slot: 22
+        material: BARRIER
+        name: "&c&lReset Color"
+        color-code: "&r"
+
+database:
+  file: clubs.db
+
+placeholder:
+  no-club: ""
+
+club:
+  name-min-length: 3
+  name-max-length: 16
+  name-regex: "^[A-Za-z0-9_]+$"
+  invite-expire-seconds: 300
+
+chat:
+  use-luckperms-prefix: true
+  format: "&bClub &7» %prefix%%player%&7: &f%message%"
+
+messages:
+  prefix: "&8[&3Club&8] &r"
+
+  help:
+    - "&8&m-----------------------------------"
+    - "&3&lClub Commands"
+    - "&8» &b/club create <name> &7- Create a club"
+    - "&8» &b/club invite <player> &7- Invite to your club"
+    - "&8» &b/club accept &7- Accept an invitation"
+    - "&8» &b/club join <name> &7- Join an open club"
+    - "&8» &b/club open &7- Open your club"
+    - "&8» &b/club close &7- Close your club"
+    - "&8» &b/club kick <player> &7- Kick a member"
+    - "&8» &b/club leave &7- Leave your club"
+    - "&8» &b/club disband &7- Disband your club"
+    - "&8» &b/club chat &7- Toggle club chat"
+    - "&8» &b/club list &7- Show members"
+    - "&8» &b/club info <club> &7- Show another club's info"
+    - "&8» &b/club admin <player> &7- Promote someone to club admin"
+    - "&8» &b/club demote <player> &7- Demote someone from club admin"
+    - "&8» &b/club color &7- Change club color (club owners only)"
+    - "&8» &b/club rename <name> &7- Rename your club (club owners only)"
+    - "&8&m-----------------------------------"
+
+  # --- System & Usage ---
+  reloaded: "&a✔ &7Club config has been reloaded."
+  players-only: "&c✖ &7Only players can use this command."
+  unknown-subcommand: "&c✖ &7Unknown subcommand. Use &b/club &7for help."
+
+  create-usage: "&cUsage: &7/club create <name>"
+  invite-usage: "&cUsage: &7/club invite <player>"
+  join-usage:   "&cUsage: &7/club join <name>"
+  kick-usage:   "&cUsage: &7/club kick <player>"
+  info-usage:   "&cUsage: &7/club info <club>"
+  admin-usage: "&3● &bUsage: &7/club admin <player>"
+  demote-usage: "&3● &bUsage: &7/club demote <player>"
+  accept-usage: "&cUsage: &7/club accept <player>"
+  rename-usage: "&cUsage: &7/club rename <name>"
+
+  # --- Info & List ---
+  info-header: "&3● &bClub: &7%club%"
+  info-owner: "&3● &bOwner: &7%owner%"
+  info-open: "&3● &bOpen: &7%open%"
+  info-admins: "&3● &bAdmins &7(&b%count%&7): %admins%"
+  info-members: "&3● &bMembers &7(&b%count%&7): %members%"
+
+  list-header: "&3● &bClub: &7%club%"
+  list-owner: "&3● &bOwner: &7%owner%"
+  list-admins: "&3● &bAdmins &7(&b%count%&7): %admins%"
+  list-members: "&3● &bMembers &7(&b%count%&7): %members%"
+
+  # --- Club Management ---
+  club-created: "&a✔ &7You successfully created the club &3%club%&7!"
+  club-renamed: "&a✔ &7You successfully renamed your club from &3%old-name%&7 to &3%new-name%&7!"
+  club-opened: "&a✔ &7Your club is now &aopen &7to everyone!"
+  club-closed: "&c✖ &7Your club is now &cclosed&7."
+  disbanded-self: "&c✖ &7You disbanded the club &4&l%club%&7."
+  disbanded-member: "&c✖ &7Your club has been disbanded by the owner!"
+  left-club: "&c✖ &7You left the club &3%club%&7."
+  owner-must-disband: "&c✖ &7You are the owner! Use &b/club disband &7instead."
+
+  # --- Joining & Invites ---
+  invited-player: "&a✔ &7You invited &b%player% &7to your club."
+  invite-received: "&a✔ &7You were invited to join &3%club%&7! Type &b/club accept&7."
+  joined-club: "&a✔ &7You joined the club &3%club%&7!"
+  member-joined-owner: "&a✔ &b%player% &7has joined your club."
+
+  # --- Kicking ---
+  kicked-player: "&a✔ &7You kicked &b%player% &7from the club."
+  kicked-notify: "&c✖ &7You have been kicked from &3%club%&7."
+
+  club-join-broadcast: "&3● &b%player% &7joined the club."
+  club-leave-broadcast: "&3● &b%player% &7left the club."
+  member-limit-remove: "&c✖ &b%player% &7was removed from the club due to member limit (40 max)."
+  club-chat-enabled: "&a✔ &7Club chat &aenabled&7!"
+  club-chat-disabled: "&c✖ &7Club chat &cdisabled&7."
+  club-invite-broadcast: "&3● &b%sender% &7invited &b%player% &7to the club."
+  club-kick-broadcast: "&3● &b%sender% &7kicked &b%player% &7from the club."
+  club-admin-promote-broadcast: "&3● &b%sender% &7promoted &b%player% &7to club admin."
+  club-admin-demote-broadcast: "&3● &b%sender% &7demoted &b%player% &7from club admin."
+  club-open-broadcast: "&3● &b%sender% &7opened the club to public joins."
+  club-close-broadcast: "&3● &b%sender% &7closed the club to public joins."
+  club-rename-broadcast: "&3● &b%sender% &7renamed the club from &b%old-name%&7 to &b%new-name%&7."
+
+  # --- General Errors ---
+  no-permission: "&c✖ &7You don't have permission to do that."
+  player-not-found: "&c✖ &7Player &e%player% &7is not online."
+  invalid-club-name: "&c✖ &7That club name is invalid."
+  club-not-found: "&c✖ &7That club does not exist."
+  club-name-exists: "&c✖ &7That club name is already taken!"
+  already-in-club: "&c✖ &7You're already in a club!"
+  not-in-club: "&c✖ &7You're not in a club!"
+  club-not-open: "&c✖ &7That club is currently closed."
+  club-full: "&c✖ &7That club is full (40 members max)!"
+  no-invite: "&c✖ &7You have no pending invitations from that player."
+  invite-expired: "&c✖ &7Your invitation has expired."
+  target-not-in-club: "&c✖ &7That player is not in your club!"
+  cannot-kick-owner: "&c✖ &7You cannot kick the club owner!"
+  target-already-in-club: "&3● &cThat player is already in a club."
+  invalid-inviter: "&c✖ &7That player hasn't invited you to a club."
+
+  # --- Role/Admin Management ---
+  only-owner-rename: "&c✖ &7Only the club owner can rename the club!"
+  only-owner-invite: "&c✖ &7Only the club owner and admins can invite players!"
+  only-owner-open: "&c✖ &7Only the club owner can open the club!"
+  only-owner-close: "&c✖ &7Only the club owner can close the club!"
+  only-owner-kick: "&c✖ &7Only the club owner can kick members!"
+  only-owner-disband: "&c✖ &7Only the club owner can disband the club!"
+  only-staff-invite: "&3● &cOnly the club owner or admins can invite players."
+  only-staff-kick: "&3● &cOnly the club owner or admins can kick players."
+  only-owner-admin: "&3● &cOnly the club owner can promote admins."
+  only-owner-demote: "&3● &cOnly the club owner can demote admins."
+  cannot-kick-admin: "&3● &cYou cannot kick another club admin."
+  owner-already-highest: "&3● &cThe owner already has the highest role."
+  already-admin: "&3● &cThat player is already a club admin."
+  not-admin: "&3● &cThat player is not a club admin."
+  cannot-demote-owner: "&3● &cYou cannot demote the club owner."
+  admin-promoted: "&3● &b%player% &7has been promoted to club admin."
+  admin-promoted-notify: "&3● &7You have been promoted to admin in &b%club%&7."
+  admin-demoted: "&3● &b%player% &7has been demoted from club admin."
+  admin-demoted-notify: "&3● &7You have been demoted from admin in &b%club%&7."

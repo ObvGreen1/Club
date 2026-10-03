@@ -1,0 +1,23 @@
+name: ClubPlugin
+main: me.obvgreen.club.ClubPlugin
+version: 1.1.0
+author: obvgreen
+description: Club system with SQLite
+softdepend: [PlaceholderAPI, LuckPerms]
+
+commands:
+  club:
+    description: Main club command
+    usage: /club
+    aliases: [clubs]
+  cc:
+    description: Toggle club chat
+    usage: /cc
+
+permissions:
+  club.create:
+    default: false
+  club.reload:
+    default: op
+  club.admin:
+    default: op
